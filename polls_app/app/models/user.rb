@@ -12,6 +12,8 @@
 
 class User < ApplicationRecord
 
+  validates :username, presence: true
+
   has_many :authored_polls,
     foreign_key: :user_id,
     primary_key: :id,
